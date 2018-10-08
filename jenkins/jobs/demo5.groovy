@@ -12,4 +12,3 @@ pipelineJob('demo_app') {
     }
   }
 }
-}
