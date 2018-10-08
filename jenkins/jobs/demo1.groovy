@@ -3,19 +3,7 @@ pipelineJob('demo_app') {
         <b>This job is managed by the devops in <code>jenkins/jobs/pipeline/demo.groovy</code>, DO NOT MODIFY</b>
     '''
   logRotator 30
-  concurrentBuild true
-  parameters {
     stringParam 'GIT_BRANCH', '$gitlabBranch', 'OPTIONAL: Branch Name to build the job.'
-  triggers {
-        gitlabPush {
-            buildOnMergeRequestEvents(true)
-            buildOnPushEvents(true)
-            enableCiSkip(false)
-            setBuildDescription(false)
-            rebuildOpenMergeRequest('never')
-
-                    }
-    }
 
   definition {
     cps {
