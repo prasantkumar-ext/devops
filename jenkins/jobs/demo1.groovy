@@ -3,6 +3,7 @@ pipelineJob('demo_app') {
         <b>This job is managed by the devops in <code>jenkins/jobs/pipeline/demo.groovy</code>, DO NOT MODIFY</b>
     '''
   logRotator 30
+  parameters {
     stringParam 'GIT_BRANCH', '$gitlabBranch', 'OPTIONAL: Branch Name to build the job.'
 
   definition {
@@ -12,4 +13,4 @@ pipelineJob('demo_app') {
     }
   }
 }
-
+}
