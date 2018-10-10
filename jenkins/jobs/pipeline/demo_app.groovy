@@ -5,8 +5,7 @@
           credentialsId: 'gitlab_user',
 
           url: 'https://github.com/prasantkumar-ext/devops.git'
-
-
+          currentBuild.description = "BranchName: ${env.GIT_BRANCH}"
           stage('Gradle Build') {
 
                sh"""
@@ -21,7 +20,10 @@
                """
           }
           stage('Publish TestReport') {
-               sh 'echo "Hi This is Demo test Project."'
+
+
+               sh """echo "Hi This is Demo test Project."
+               """
           }
 
 }

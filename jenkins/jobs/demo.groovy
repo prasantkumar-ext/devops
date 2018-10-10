@@ -4,7 +4,7 @@ pipelineJob('demo_app1') {
     '''
   logRotator 30
   parameters {
-    stringParam 'GIT_BRANCH', '$gitlabBranch', 'OPTIONAL: Branch Name to build the job.'
+    stringParam 'GIT_BRANCH', '$gitBranch', 'OPTIONAL: Branch Name to build the job.'
 
   definition {
     cps {
