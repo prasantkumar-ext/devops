@@ -10,6 +10,7 @@
           stage('Gradle Build') {
 
                sh"""
+               rm -rf build && \
                ./build.sh
                """
 	      }
